@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="frontend.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Password Manager</h1>
+    
+    <!-- Existing sections -->
+    <div>
+      <h3>Initialize Keychain</h3>
+      <input type="password" id="master-password" placeholder="Enter master password">
+      <button onclick="initializeKeychain()">Initialize</button>
+    </div>
+  
+    <div>
+      <h3>Set Password</h3>
+      <input type="text" id="set-domain" placeholder="Domain">
+      <input type="password" id="set-password" placeholder="Password">
+      <button onclick="setPassword()">Set Password</button>
+    </div>
+  
+    <div>
+      <h3>Get Password</h3>
+      <input type="text" id="get-domain" placeholder="Domain">
+      <button onclick="getPassword()">Get Password</button>
+      <p id="get-password-result"></p>
+    </div>
+  
+    <div>
+      <h3>Remove Password</h3>
+      <input type="text" id="remove-domain" placeholder="Domain">
+      <button onclick="removePassword()">Remove Password</button>
+    </div>
+    
+    <!-- Status message area -->
+    <div id="status-message" class="status"></div>
+  </div>
+</body>
+</html>
